@@ -1,0 +1,135 @@
+.container-general {
+  margin: 10px 20px;
+}
+
+.search-bar {
+  margin: 35px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  min-width: 200px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 200px;
+
+  &:focus {
+    border-color: #007bff;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.cat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: left;
+
+  th,
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .cat-image {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .cat-table,
+    .cat-table thead,
+    .cat-table tbody,
+    .cat-table th,
+    .cat-table td,
+    .cat-table tr {
+      display: block;
+    }
+
+    .cat-table thead tr {
+      display: none;
+    }
+
+    .cat-table tr {
+      margin-bottom: 15px;
+    }
+
+    .cat-table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 5px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    .cat-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 10px);
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .cat-image {
+      max-width: 50px;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+}
+
+.no-data {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px 0;
+}

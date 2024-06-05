@@ -1,0 +1,37 @@
+<section class="container-general">
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar por nombre u origen" [(ngModel)]="searchQuery"
+      (ngModelChange)="filterCats()" />
+  </div>
+
+  <table class="cat-table">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Temperamento</th>
+        <th>Origen</th>
+        <th>Descripción</th>
+        <th>Esperanza de vida (años)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of filteredCats ">
+        <td>
+          <img [src]="cat.image? cat.image.url : '../../../../assets/images/image-no.png'" [alt]="cat.name"
+            class="cat-image">
+        </td>
+        <td>{{ cat.name }}</td>
+        <td>{{ cat.temperament }}</td>
+        <td>{{ cat.origin }}</td>
+        <td>{{ cat.description }}</td>
+        <td>{{ cat.life_span }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="no-data">
+    <span  *ngIf="filteredCats.length === 0">No se encontraron resultados</span>
+    <img src="../../../../assets/images/no-data.png" alt="">
+  </p>
+</section>
