@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: BreedListComponent,
   },
+  {
+    path: 'breeds-cat',
+    component: BreedListComponent,
+  },
 ];
 
 @NgModule({

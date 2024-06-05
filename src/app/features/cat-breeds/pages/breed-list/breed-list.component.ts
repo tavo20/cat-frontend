@@ -32,7 +32,6 @@ export class BreedListComponent {
       return
     }
     this.breeds = respon;
-    console.log(this.breeds)
   }
 
 
@@ -68,7 +67,6 @@ export class BreedListComponent {
         child_friendly: 1,
         image: { url: 'https://cdn2.thecatapi.com/images/s4wQfYoEk.jpg' }
       },
-      breed
     ]
 
     this.cats =[];
