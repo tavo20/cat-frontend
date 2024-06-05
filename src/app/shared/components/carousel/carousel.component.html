@@ -1,0 +1,15 @@
+<div class="carousel">
+    <button (click)="prevCat()" class="carousel-button prev-button">⟨</button>
+    
+    <div class="carousel-container">
+      <div class="carousel-item" *ngFor="let cat of cats; let i = index" [class.active]="i === currentIndex">
+        <img [src]="cat.image" [alt]="cat.name" class="cat-image">
+        <h2 class="cat-name">{{ cat.name }}</h2>
+        <p class="cat-description">{{ cat.description }}</p>
+        <p class="cat-origin">{{ cat.origin }}</p>
+      </div>
+    </div>
+    
+    <button (click)="nextCat()" class="carousel-button next-button">⟩</button>
+  </div>
+  

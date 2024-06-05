@@ -1,0 +1,49 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  
+    .social-media {
+      margin-bottom: 10px;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #575757;
+        }
+  
+        fa-icon {
+          vertical-align: middle;
+        }
+      }
+    }
+  
+    .footer-text {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      .social-media {
+        a {
+          margin: 0 5px;
+          font-size: 18px;
+        }
+      }
+  
+      .footer-text {
+        font-size: 12px;
+      }
+    }
+  }
+  
