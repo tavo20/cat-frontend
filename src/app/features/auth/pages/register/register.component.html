@@ -29,6 +29,9 @@
               </div>
             </div>
             <button type="submit" [disabled]="registerForm.invalid">Registrarse</button>
+            <div class="container-go-to-login">
+              <a (click)="onGoToLogin()">Login</a>
+            </div>
           </form>
         </div>
       </div>

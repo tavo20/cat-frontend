@@ -43,9 +43,15 @@ export class LoginComponent {
       );
     } else {
       console.log('Form not valid');
+      this.loginForm.markAllAsTouched();
+
     }
   }
 
   get email() { return this.loginForm.get('email'); }
   get password() { return this.loginForm.get('password'); }
+
+  onGoToRegister() {
+    this.router.navigate(['/auth/register']);
+  }
 }
