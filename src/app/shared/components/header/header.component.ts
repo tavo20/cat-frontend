@@ -17,4 +17,8 @@ export class HeaderComponent {
     this.router.navigate(['/auth/login']);
 
   }
+
+  public onGoToProfile() {
+    this.router.navigate(['/profile']);
+  }
 }

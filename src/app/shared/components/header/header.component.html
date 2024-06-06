@@ -4,7 +4,7 @@
   </div>
   <nav class="menu">
     <a routerLink="/" routerLinkActive="active">Home</a>
-    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+    <a (click)="onGoToProfile()" routerLinkActive="active">Profile</a>
     <a (click)="onCloseSesion()" routerLinkActive="active">Cerrar sesión</a>
   </nav>
 </header>
